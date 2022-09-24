@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  user: LoginUser;
+  user: LoginUser = new LoginUser();
 
   constructor(private userService: UserService) {}
 
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     const { email, password } = this.user;
 
     if (email && password) {
+      alert('Submitting');
       this.userService.loginUser(this.user);
       // redirect to dashboard
     } else {
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  cancelButton(): void {
+  onCancel(): void {
     window.location.href = '/';
   }
 }

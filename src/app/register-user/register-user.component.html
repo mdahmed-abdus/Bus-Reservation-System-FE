@@ -1,6 +1,46 @@
 <form (submit)="onSubmit()">
-  <input type="email" placeholder="Enter Email" required />
-  <input type="password" placeholder="Enter password" required />
-  <button type="button">Cancel</button>
-  <button type="submit">Login</button>
+  <input
+    name="firstName"
+    type="text"
+    placeholder="Enter First Name"
+    required
+    [(ngModel)]="user.firstName"
+  />
+  <input
+    name="lastName"
+    type="text"
+    placeholder="Enter Last Name"
+    required
+    [(ngModel)]="user.lastName"
+  />
+  <input
+    name="email"
+    type="email"
+    placeholder="Enter Email"
+    required
+    [(ngModel)]="user.email"
+  />
+  <input
+    name="password"
+    type="password"
+    placeholder="Enter password"
+    required
+    [(ngModel)]="user.password"
+  />
+  <input
+    name="confirmPassword"
+    type="password"
+    placeholder="Confirm password"
+    required
+    [(ngModel)]="user.confirmPassword"
+  />
+  <input
+    name="contactNumber"
+    type="text"
+    placeholder="Enter Contact Number"
+    required
+    [(ngModel)]="user.contactNumber"
+  />
+  <button type="button" (click)="onCancel()">Cancel</button>
+  <button type="submit">Register</button>
 </form>

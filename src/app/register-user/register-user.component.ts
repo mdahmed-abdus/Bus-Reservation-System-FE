@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./register-user.component.css'],
 })
 export class RegisterUserComponent implements OnInit {
-  user: RegisterUser;
+  user: RegisterUser = new RegisterUser();
 
   constructor(private userService: UserService) {}
 
@@ -36,6 +36,7 @@ export class RegisterUserComponent implements OnInit {
       if (password !== confirmPassword) {
         alert('Password does not match');
       } else {
+        alert('Submitting');
         this.userService.registerUser(this.user);
         // redirect to login
       }
