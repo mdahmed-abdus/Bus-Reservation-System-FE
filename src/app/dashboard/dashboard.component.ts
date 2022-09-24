@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
   }
 
   onLogout(): void {
+    sessionStorage.clear();
     window.location.href = '/';
   }
 }

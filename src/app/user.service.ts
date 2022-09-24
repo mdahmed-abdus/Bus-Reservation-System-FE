@@ -9,7 +9,7 @@ import { User } from 'User';
   providedIn: 'root',
 })
 export class UserService {
-  private BASE_URL = 'http://localhost:3000';
+  private BASE_URL = 'http://localhost:8089/userApp1';
   private url = this.BASE_URL + '/users';
 
   constructor(private httpService: HttpClient) {}
