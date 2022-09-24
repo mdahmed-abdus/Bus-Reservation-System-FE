@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    const { email, password } = this.user;
+    const { mail, pwd } = this.user;
 
-    if (email && password) {
+    if (mail && pwd) {
       alert('Submitting');
       this.userService.loginUser(this.user).subscribe((data) => {
         sessionStorage.setItem('user', JSON.stringify(data));

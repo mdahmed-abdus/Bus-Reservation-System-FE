@@ -1,12 +1,12 @@
 export class User {
-  userId: string;
-  password: string;
-  address: string;
-  contactNumber: string;
-  dob: string;
-  email: string;
-  firstName: string;
-  lastName: string;
+  uid: number;
+  fname: string;
+  lname: string;
   gender: string;
-  wallet: string;
+  phoneNo: string;
+  address: string;
+  mail: string;
+  pwd: string;
+  wallet: number;
+  dob: Date;
 }

@@ -1,8 +1,8 @@
 export class RegisterUser {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  contactNumber: string;
+  fname: string;
+  lname: string;
+  mail: string;
+  pwd: string;
+  confirmPwd: string;
+  phoneNo: string;
 }

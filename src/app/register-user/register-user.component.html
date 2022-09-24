@@ -4,42 +4,42 @@
     type="text"
     placeholder="Enter First Name"
     required
-    [(ngModel)]="user.firstName"
+    [(ngModel)]="user.fname"
   />
   <input
     name="lastName"
     type="text"
     placeholder="Enter Last Name"
     required
-    [(ngModel)]="user.lastName"
+    [(ngModel)]="user.lname"
   />
   <input
     name="email"
     type="email"
     placeholder="Enter Email"
     required
-    [(ngModel)]="user.email"
+    [(ngModel)]="user.mail"
   />
   <input
     name="password"
     type="password"
     placeholder="Enter password"
     required
-    [(ngModel)]="user.password"
+    [(ngModel)]="user.pwd"
   />
   <input
     name="confirmPassword"
     type="password"
     placeholder="Confirm password"
     required
-    [(ngModel)]="user.confirmPassword"
+    [(ngModel)]="user.confirmPwd"
   />
   <input
     name="contactNumber"
     type="text"
     placeholder="Enter Contact Number"
     required
-    [(ngModel)]="user.contactNumber"
+    [(ngModel)]="user.phoneNo"
   />
   <button type="button" (click)="onCancel()">Cancel</button>
   <button type="submit">Register</button>

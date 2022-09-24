@@ -16,25 +16,10 @@ export class RegisterUserComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      confirmPassword,
-      contactNumber,
-    } = this.user;
+    const { fname, lname, mail, pwd, confirmPwd, phoneNo } = this.user;
 
-    if (
-      firstName &&
-      lastName &&
-      lastName &&
-      email &&
-      password &&
-      confirmPassword &&
-      contactNumber
-    ) {
-      if (password !== confirmPassword) {
+    if (fname && lname && mail && pwd && confirmPwd && phoneNo) {
+      if (pwd !== confirmPwd) {
         alert('Password does not match');
       } else {
         alert('Submitting');
