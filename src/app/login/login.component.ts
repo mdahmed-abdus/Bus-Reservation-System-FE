@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginUser } from 'LoginUser';
 import { UserService } from '../user.service';
 
@@ -10,7 +11,7 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
   user: LoginUser = new LoginUser();
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -19,8 +20,10 @@ export class LoginComponent implements OnInit {
 
     if (email && password) {
       alert('Submitting');
-      this.userService.loginUser(this.user);
-      // redirect to dashboard
+      this.userService.loginUser(this.user).subscribe((data) => {
+        sessionStorage.setItem('user', JSON.stringify(data));
+        this.router.navigate(['/users/dashboard']);
+      });
     } else {
       alert('Please enter all details');
     }
