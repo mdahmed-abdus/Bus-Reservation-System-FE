@@ -19,6 +19,6 @@ export class UserService {
   }
 
   registerUser(registerUser: RegisterUser): Observable<User> {
-    return this.httpService.post<User>(this.url + '/register', registerUser);
+    return this.httpService.post<User>(this.url, registerUser);
   }
 }
