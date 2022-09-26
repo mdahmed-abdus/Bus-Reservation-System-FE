@@ -8,6 +8,13 @@ import { User } from 'User';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  sidebarList = [
+    { title: 'My Dashboard', link: 'dashboard' },
+    { title: 'Bookings', link: 'bookings' },
+    { title: 'Profile', link: 'profile' },
+    { title: 'Change Password', link: 'change-password' },
+    { title: 'Wallet', link: 'wallet' },
+  ];
   user: User = new User();
 
   constructor(private router: Router) {}
@@ -16,7 +23,7 @@ export class DashboardComponent implements OnInit {
     try {
       this.user = JSON.parse(sessionStorage['user']);
     } catch {
-      this.router.navigate(['/']);
+      // this.router.navigate(['/']);
       return;
     }
   }
@@ -24,5 +31,12 @@ export class DashboardComponent implements OnInit {
   onLogout(): void {
     sessionStorage.clear();
     window.location.href = '/';
+  }
+
+  onClick(link: string): void {
+    document
+      .querySelectorAll('.active')
+      .forEach((e) => e.classList.remove('active'));
+    document.querySelector('#' + link)?.classList.add('active');
   }
 }

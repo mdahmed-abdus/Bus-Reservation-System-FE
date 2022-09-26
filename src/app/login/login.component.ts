@@ -21,6 +21,10 @@ export class LoginComponent implements OnInit {
     if (mail && pwd) {
       alert('Submitting');
       this.userService.loginUser(this.user).subscribe((data) => {
+        if (!data) {
+          alert('Invalid email or password');
+          return;
+        }
         sessionStorage.setItem('user', JSON.stringify(data));
         this.router.navigate(['/users/dashboard']);
       });

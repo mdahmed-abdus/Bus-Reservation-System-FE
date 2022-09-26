@@ -1,4 +1,4 @@
-<div>
+<!-- 
   <p>User id: {{ user.user_Id }}</p>
   <p>Password: {{ user.pwd }}</p>
   <p>Address: {{ user.address }}</p>
@@ -10,4 +10,54 @@
   <p>Gender: {{ user.gender }}</p>
   <p>Wallet: {{ user.wallet }}</p>
   <button (click)="onLogout()">Logout</button>
+</div> -->
+
+<!-- nav here -->
+<div class="container-fluid">
+  <div class="row">
+    <h1>Hello {{ user.fname || "User" }}</h1>
+  </div>
+  <div class="row flex-grow-sm-1 flex-grow-0">
+    <aside
+      class="col-12 col-md-3 flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-sm-0 pb-3"
+    >
+      <div class="border p-1 sticky-top">
+        <ul
+          class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate"
+        >
+          <li *ngFor="let s of sidebarList">
+            <a
+              href="/users/dashboard#{{ s.link }}"
+              class="nav-link px-2 text-truncate"
+              (click)="onClick(s.link)"
+            >
+              <span>{{ s.title }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="col-12 col-md-9 overflow-auto">
+      <div class="contentWrap border p-3 active" id="dashboard">
+        <h2>My Dashboard</h2>
+        <app-sub-dashboard></app-sub-dashboard>
+      </div>
+      <div class="contentWrap border p-3" id="bookings">
+        <h2>Bookings</h2>
+        <app-bookings></app-bookings>
+      </div>
+      <div class="contentWrap border p-3" id="profile">
+        <h2>Profile</h2>
+        <app-user-profile></app-user-profile>
+      </div>
+      <div class="contentWrap border p-3" id="change-password">
+        <h2>Change Password</h2>
+        <app-change-password></app-change-password>
+      </div>
+      <div class="contentWrap border p-3" id="wallet">
+        <h2>Wallet</h2>
+        <app-wallet></app-wallet>
+      </div>
+    </main>
+  </div>
 </div>

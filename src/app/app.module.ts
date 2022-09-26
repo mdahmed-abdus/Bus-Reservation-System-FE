@@ -7,9 +7,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChangePasswordComponent } from './sharedComponents/change-password/change-password.component';
+import { WalletComponent } from './sharedComponents/wallet/wallet.component';
+import { BookingsComponent } from './sharedComponents/bookings/bookings.component';
+import { SubDashboardComponent } from './sharedComponents/sub-dashboard/sub-dashboard.component';
+import { UserProfileComponent } from './sharedComponents/user-profile/user-profile.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterUserComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterUserComponent,
+    DashboardComponent,
+    ChangePasswordComponent,
+    WalletComponent,
+    BookingsComponent,
+    SubDashboardComponent,
+    UserProfileComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
