@@ -13,6 +13,7 @@ import { BookingsComponent } from './sharedComponents/bookings/bookings.componen
 import { SubDashboardComponent } from './sharedComponents/sub-dashboard/sub-dashboard.component';
 import { UserProfileComponent } from './sharedComponents/user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     SubDashboardComponent,
     UserProfileComponent,
     NavbarComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
