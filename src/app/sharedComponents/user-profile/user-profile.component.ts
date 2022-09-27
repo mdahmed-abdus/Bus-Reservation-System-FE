@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'User';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css'],
 })
 export class UserProfileComponent implements OnInit {
-  constructor() {}
+  user: User = new User();
+
+  constructor() {
+    try {
+      this.user = JSON.parse(sessionStorage['user']);
+    } catch {
+      // this.router.navigate(['/']);
+      return;
+    }
+  }
 
   ngOnInit(): void {}
+
+  onSubmit(): void {
+    alert('Submitting');
+    // TODO: submit to backend
+  }
 }
