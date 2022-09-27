@@ -12,6 +12,7 @@ import { WalletComponent } from './sharedComponents/wallet/wallet.component';
 import { BookingsComponent } from './sharedComponents/bookings/bookings.component';
 import { SubDashboardComponent } from './sharedComponents/sub-dashboard/sub-dashboard.component';
 import { UserProfileComponent } from './sharedComponents/user-profile/user-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UserProfileComponent } from './sharedComponents/user-profile/user-profi
     BookingsComponent,
     SubDashboardComponent,
     UserProfileComponent,
+    NavbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
