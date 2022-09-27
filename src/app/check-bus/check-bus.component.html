@@ -1,0 +1,60 @@
+<h1 class="mb-3">Search for Bus</h1>
+<form (submit)="onSubmit()">
+  <fieldset>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <label>Select Source </label>
+        <select
+          id="source"
+          name="source"
+          [(ngModel)]="sourceDest.source"
+          class="form-control selectpicker"
+          required
+        >
+          <option value="">From</option>
+          <option>Hyderabad</option>
+          <option>Delhi</option>
+          <option>Bangalore</option>
+          <option>Kolkata</option>
+          <option>Chennai</option>
+          <option>Mumbai</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <label>Select Destination</label>
+        <select
+          id="destination"
+          name="destination"
+          [(ngModel)]="sourceDest.destination"
+          class="form-control selectpicker"
+        >
+          <option value="">To</option>
+          <option>Hyderabad</option>
+          <option>Delhi</option>
+          <option>Bangalore</option>
+          <option>Kolkata</option>
+          <option>Chennai</option>
+          <option>Mumbai</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <label>Select Date</label>
+        <input
+          id="date"
+          name="date"
+          [(ngModel)]="sourceDest.date"
+          placeholder="DD/MM/YYYY"
+          class="form-control"
+          type="date"
+        />
+        <small id="dateerror"></small>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-4">
+      <div class="col-3 offset-2">
+        <button type="submit" class="btn btn-primary mt-3">Search Bus</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

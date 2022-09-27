@@ -14,6 +14,8 @@ import { SubDashboardComponent } from './sharedComponents/sub-dashboard/sub-dash
 import { UserProfileComponent } from './sharedComponents/user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { CheckBusComponent } from './check-bus/check-bus.component';
+import { ShowBussesComponent } from './show-busses/show-busses.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { HomeComponent } from './home/home.component';
     UserProfileComponent,
     NavbarComponent,
     HomeComponent,
+    CheckBusComponent,
+    ShowBussesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
