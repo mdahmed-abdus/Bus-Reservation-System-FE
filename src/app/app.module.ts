@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CheckBusComponent } from './check-bus/check-bus.component';
 import { ShowBussesComponent } from './show-busses/show-busses.component';
+import { ManageBussesComponent } from './sharedComponents/manage-busses/manage-busses.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ShowBussesComponent } from './show-busses/show-busses.component';
     HomeComponent,
     CheckBusComponent,
     ShowBussesComponent,
+    ManageBussesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

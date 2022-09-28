@@ -15,11 +15,13 @@ export class DashboardComponent implements OnInit {
     { title: 'Change Password', link: 'change-password' },
     { title: 'Wallet', link: 'wallet' },
   ];
+  adminSidebarList = [{ title: 'Manage Busses', link: 'manage-busses' }];
   user: User = new User();
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.user.userType = 'admin';
     try {
       this.user = JSON.parse(sessionStorage['user']);
     } catch {

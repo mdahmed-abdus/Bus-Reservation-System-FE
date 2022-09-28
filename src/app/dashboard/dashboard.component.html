@@ -19,6 +19,17 @@
               <span>{{ s.title }}</span>
             </a>
           </li>
+          <ng-container *ngIf="user.userType === 'admin'">
+            <li *ngFor="let s of adminSidebarList">
+              <a
+                href="/users/dashboard#{{ s.link }}"
+                class="nav-link px-2 text-truncate"
+                (click)="onClick(s.link)"
+              >
+                <span>{{ s.title }}</span>
+              </a>
+            </li>
+          </ng-container>
         </ul>
       </div>
     </aside>
@@ -42,6 +53,10 @@
       <div class="contentWrap border p-3" id="wallet">
         <h2>Wallet</h2>
         <app-wallet></app-wallet>
+      </div>
+      <div class="contentWrap border p-3" id="manage-busses">
+        <h2>Manage Busses</h2>
+        <app-manage-busses></app-manage-busses>
       </div>
     </main>
   </div>
