@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { ShowBusComponent } from './show-bus/show-bus.component';
 import { ShowBussesComponent } from './show-busses/show-busses.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'users/register', component: RegisterUserComponent },
   { path: 'users/dashboard', component: DashboardComponent },
   { path: 'show-busses', component: ShowBussesComponent },
+  { path: 'show-busses/:id', component: ShowBusComponent },
 ];
 
 @NgModule({

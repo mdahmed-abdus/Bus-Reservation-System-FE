@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { CheckBusComponent } from './check-bus/check-bus.component';
 import { ShowBussesComponent } from './show-busses/show-busses.component';
 import { ManageBussesComponent } from './sharedComponents/manage-busses/manage-busses.component';
+import { ShowBusComponent } from './show-bus/show-bus.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ManageBussesComponent } from './sharedComponents/manage-busses/manage-b
     CheckBusComponent,
     ShowBussesComponent,
     ManageBussesComponent,
+    ShowBusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

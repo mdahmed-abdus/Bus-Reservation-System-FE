@@ -10,4 +10,5 @@ export class Bus {
   source: String;
   destination: String;
   dateOfTravel: Date;
+  fare: number;
 }

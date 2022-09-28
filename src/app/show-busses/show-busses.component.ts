@@ -26,6 +26,7 @@ export class ShowBussesComponent implements OnInit {
       b1.source = 'Mumbai';
       b1.destination = 'New Delhi';
       b1.duration = '9';
+      b1.fare = 1199;
 
       b2.busId = 102;
       b2.busName = 'Volvo';
@@ -36,6 +37,7 @@ export class ShowBussesComponent implements OnInit {
       b2.source = 'Mumbai';
       b2.destination = 'New Delhi';
       b2.duration = '9';
+      b2.fare = 2599;
 
       this.busses = [b1, b2];
     } catch {
