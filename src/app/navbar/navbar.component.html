@@ -23,12 +23,21 @@
         <li class="nav-item">
           <a class="nav-link" href="">Contact Us</a>
         </li>
+        <!-- TODO: IMP remove in prod -->
         <li class="nav-item">
           <a class="nav-link" href="/users/dashboard">dashboard[dev]</a>
         </li>
       </ul>
-      <a class="btn btn-outline-primary" href="/users/login">Login</a>
-      <a class="nav-link ms-3" href="/users/register">Sign Up</a>
+      <ng-container *ngIf="!isLoggedIn">
+        <a class="btn btn-outline-primary" href="/users/login">Login</a>
+        <a class="nav-link ms-3" href="/users/register">Sign Up</a>
+      </ng-container>
+      <ng-container *ngIf="isLoggedIn">
+        <a class="nav-link" href="/users/dashboard">Dashboard</a>
+        <button class="btn btn-outline-primary ms-3" (click)="onLogout()">
+          Logout
+        </button>
+      </ng-container>
     </div>
   </div>
 </nav>
