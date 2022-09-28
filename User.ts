@@ -9,4 +9,5 @@ export class User {
   pwd: string;
   wallet: number;
   dob: Date;
+  userType: string;
 }
