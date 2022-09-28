@@ -15,4 +15,8 @@ export class CheckBusService {
   getAllBuses(): Observable<Bus[]> {
     return this.httpService.get<Bus[]>(this.url);
   }
+
+  getBusById(id: number): Observable<Bus> {
+    return this.httpService.get<Bus>(this.url + `/${id}`);
+  }
 }
